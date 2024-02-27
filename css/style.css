@@ -1,0 +1,230 @@
+:root{
+    --corDeFundo: #131b24;
+    --corDeTexto: #ffffff;
+    --corDeDetalhes: #13bbff;
+}
+
+*{
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+}
+
+header{
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 35%, rgba(0,0,0,1) 100%), url(../img/mogli.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+.nav-flex{
+    width: 60%;
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cor-texto{
+    color: var(--corDeTexto);
+}
+
+.descricao-roleta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--corDeTexto);
+    width: 400px;
+}
+.descricao-roleta2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--corDeTexto);
+}
+.estrela{
+    color: var(--corDeDetalhes);
+}
+
+.nota{
+    display: inline-block;
+    border: 1px solid var(--corDeDetalhes);
+    color: var(--corDeTexto);
+    padding: 1px;
+}
+
+.botao{
+    background: var(--corDeDetalhes);
+    color: var(--corDeTexto);
+    border: 2px solid var(--corDeDetalhes);
+    width: 108px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.50s ease;
+ }
+ .botao:hover{
+    box-shadow: 0 0 20px var(--corDeDetalhes);
+    transform: scale(1.1);
+ }
+
+ .botao2{
+    background: transparent;
+    color: var(--corDeTexto);
+    border: 2px solid var(--corDeTexto);
+    width: 100px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.50s ease;
+ }
+ .botao2:hover{
+    box-shadow: 0 0 20px var(--corDeDetalhes);
+    transform: scale(1.1);
+ }
+
+ .fav{
+    text-decoration: none;
+    list-style: none;
+    color: var(--corDeTexto);
+ }
+
+ .posicao{
+    margin-top: 380px;
+ }
+
+ .list-topic{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+ }
+
+ .topicos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--corDeDetalhes);
+    width: 60%;
+ }
+
+ul li a{
+    list-style: none;
+    text-decoration: none;
+    font-weight: 500;
+ }
+
+ main{
+    background-color: aliceblue;
+ }
+
+ .cards {
+    width: 260px;
+    height: 360px;
+    margin: 10px;
+    perspective: 700px;
+    gap: 10px;
+ }
+
+ .front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    transition: 0.5s ease-in-out;
+
+ }
+
+ .cards .front figure{
+    width: 100%;
+    height: 70%;
+ }
+
+ .cards .front figure img{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: cover;
+    border-radius: 3px;
+ }
+
+ .cards .front .info{
+    width: 100%;
+    height: 30%;
+    padding: 5px 15px;
+ }
+
+ .titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+
+ .descricao{
+    text-align: center;
+    color: var(--corDeDetalhes);
+ }
+
+ 
+
+ .front{
+    background: #ffffff;
+    z-index: 1;
+ }
+
+ .back{
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+ }
+
+ .focus{
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    padding: 15px;
+    border-radius: 3px;
+ }
+
+ .indice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .card-nota{
+    border: 1px solid var(--corDeDetalhes);
+    color: var(--corDeDetalhes);
+}
+
+
+ .sinopse{
+    color: var(--corDeTexto);
+    text-align: justify;
+    overflow: hidden; /* "overflow" value must be different from "visible" */
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 50%;
+ }
+
+ .cards:hover .front {
+    transform: rotateY(180deg);
+    z-index: 0;
+ }
+
+ .cards:hover .back{
+    transform: rotateY(0);
+    z-index: 1;
+ }
+
+ footer{
+   background-color: #ffffff;
+   padding: 40px;
+ }
+
+ footer div a{
+   text-decoration: none;
+   color: #000000;
+ }
